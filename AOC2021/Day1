@@ -1,0 +1,29 @@
+
+f = open("puzzle.txt", "r")
+
+def day1_1(f):
+    liste = [int(i) for i in f.readlines()]
+    counter = 0
+    minimum = liste[0]
+    for j in liste:
+        if j > minimum:
+            counter += 1
+        minimum = j
+        print(minimum, counter)
+    f.seek(0)
+    print(counter)
+
+
+def day1_2(f):
+    liste = [int(i) for i in f.readlines()]
+    counter = 0
+    minimum = sum(liste[0:3])
+    for i in range(len(liste)):
+        if sum(liste[i:i+3]) > minimum:
+            counter += 1
+        minimum = sum(liste[i:i+3])
+    print(counter)
+
+day1_2(f)
+        
+        

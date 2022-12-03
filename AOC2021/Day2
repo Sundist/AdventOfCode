@@ -1,0 +1,19 @@
+f = open("puzzle.txt", "r")
+downCounter = 0
+upCounter = 0
+forwardCounter = 0
+depthCounter = 0
+forw = 0
+
+for i in f.readlines():
+    if 'forward' in i:
+        forw = int(i.split(" ",2)[1])
+        depthCounter += forw * (downCounter + upCounter)
+        forwardCounter += forw
+    if 'up' in i:
+        upCounter -= int(i.split(" ",2)[1])
+    if 'down' in i:
+        downCounter += int(i.split(" ",2)[1])
+    
+
+print(depthCounter * forwardCounter)
