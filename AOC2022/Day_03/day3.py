@@ -1,4 +1,5 @@
 
+
 data = open('input.txt', 'r')
 sumOfPriorities = 0
 for rucksack in data.readlines():
