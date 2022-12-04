@@ -1,6 +1,5 @@
 data = open('input.txt', 'r')
-firstElfList = list()
-secondElfList = list()
+
 fullyContainCounter = 0
 overlapCounter = 0
 for line in data.readlines():
