@@ -11,7 +11,6 @@ with open('input.txt', 'r') as data:
 #     i += 1
 
 ## PART 2 ##
-
 i = 0
 marker = ''  # 14 chars
 while len(set(marker)) != 14 and i < len(data_stream):
